@@ -2,7 +2,7 @@ services:
   - type: web
     name: n8n-kreakom
     env: docker
-    repo: https://github.com/KREAKOM-ENERGY/n8n-render-deploy
+    repo: repo: https://github.com/KREAKOM-ENERGY/n8n-kreakom
     branch: main
     dockerfilePath: ./Dockerfile
     envVars:
@@ -18,3 +18,4 @@ services:
         value: 0.0.0.0
       - key: N8N_PORT
         value: 5678
+        Fix: corrigé l'URL du dépôt GitHub dans render.yaml

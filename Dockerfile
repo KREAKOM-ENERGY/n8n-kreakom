@@ -1,7 +1,7 @@
-FROM n8nio/n8n:1.25.1
+FROM n8nio/n8n:latest
 
-# Expose le bon port
+# Exposer le port utilisé par n8n
 EXPOSE 5678
 
-# Commande de démarrage
-CMD ["n8n"]
+# Démarrer le service
+CMD ["tini", "--", "n8n"]

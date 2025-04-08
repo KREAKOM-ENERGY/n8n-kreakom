@@ -7,7 +7,7 @@ services:
     env: docker
     plan: starter
     region: frankfurt
-    dockerfilePath: ./dockerfile
+    dockerfilePath: ./Dockerfile
     envVars:
       - key: DB_TYPE
         value: postgresdb

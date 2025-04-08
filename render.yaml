@@ -1,1 +1,37 @@
-
+# ==========================================
+# 📁 render.yaml (configuration Render)
+# ==========================================
+services:
+  - type: web
+    name: n8n-kreakom
+    env: docker
+    plan: starter
+    region: frankfurt
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: DB_TYPE
+        value: postgresdb
+      - key: DB_POSTGRESDB_HOST
+        sync: false
+      - key: DB_POSTGRESDB_PORT
+        value: "5432"
+      - key: DB_POSTGRESDB_DATABASE
+        sync: false
+      - key: DB_POSTGRESDB_USER
+        sync: false
+      - key: DB_POSTGRESDB_PASSWORD
+        sync: false
+      - key: GENERIC_TIMEZONE
+        value: Europe/Paris
+      - key: DEFAULT_LOCALE
+        value: fr
+      - key: WEBHOOK_URL
+        value: https://n8n-kreakom.onrender.com/
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: "true"
+      - key: N8N_BASIC_AUTH_USER
+        sync: false
+      - key: N8N_BASIC_AUTH_PASSWORD
+        sync: false
+      - key: N8N_ENCRYPTION_KEY
+        sync: false
